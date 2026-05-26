@@ -1,0 +1,10 @@
+# Local dev server config
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.code-workspace

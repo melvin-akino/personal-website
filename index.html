@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vin T. Aquino — Senior Software Architect &amp; IT Consultant. Bridging high-level business strategy and deep technical execution for fintech, healthcare, and enterprise teams." />
+  <title>Vin T. Aquino — Senior Software Architect &amp; IT Consultant</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-mark"><span>VA</span></div>
+      <span>Vin T. Aquino</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="nav-links">
+      <a href="#about"     class="nav-link">About</a>
+      <a href="#services"  class="nav-link">Services</a>
+      <a href="#stack"     class="nav-link">Stack</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact"   class="nav-link">Contact</a>
+      <a href="#contact"   class="nav-cta">Book a call</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about"     class="mobile-link">About</a>
+    <a href="#services"  class="mobile-link">Services</a>
+    <a href="#stack"     class="mobile-link">Stack</a>
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
+    <a href="#contact"   class="mobile-link">Contact</a>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <!-- Left: copy -->
+    <div class="reveal">
+      <div class="hero-status">
+        <span class="dot"></span>
+        Available · Q3 2026 engagements
+      </div>
+
+      <h1>
+        Architecting scalable systems,
+        <span class="accent">driving business value.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Senior Software Architect &amp; IT Consultant.
+        <strong>Bridging the gap</strong> between high-level business strategy
+        and deep technical execution — for fintech, healthcare, and enterprise teams.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn btn-primary">
+          Explore portfolio
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Consult with Vin</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="num">20<span style="color:var(--blue)">+</span></div>
+          <div class="label">Years shipping</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">40<span style="color:var(--blue)">+</span></div>
+          <div class="label">Systems architected</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">12</div>
+          <div class="label">Industries served</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: architecture diagram -->
+    <div class="hero-visual reveal">
+      <svg viewBox="0 0 540 540" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="hg-stroke" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%"   stop-color="#2563eb" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#2563eb" stop-opacity="0.2"/>
+          </linearGradient>
+          <radialGradient id="hg-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#2563eb" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- rings -->
+        <circle cx="270" cy="270" r="200" fill="none" stroke="#2563eb" stroke-opacity="0.15" stroke-dasharray="2 6"/>
+        <circle cx="270" cy="270" r="150" fill="none" stroke="#2563eb" stroke-opacity="0.20" stroke-dasharray="2 5"/>
+        <circle cx="270" cy="270" r="100" fill="none" stroke="#2563eb" stroke-opacity="0.25"/>
+        <circle cx="270" cy="270" r="240" fill="url(#hg-glow)"/>
+
+        <!-- connection lines -->
+        <line x1="270" y1="270" x2="130" y2="170" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="410" y2="170" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="120" y2="370" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="420" y2="370" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="270" y2="110" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="270" y2="430" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="80"  y2="270" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="270" y1="270" x2="460" y2="270" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="130" y1="170" x2="270" y2="110" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="410" y1="170" x2="270" y2="110" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="120" y1="370" x2="270" y2="430" stroke="url(#hg-stroke)" stroke-width="1"/>
+        <line x1="420" y1="370" x2="270" y2="430" stroke="url(#hg-stroke)" stroke-width="1"/>
+
+        <!-- centre node -->
+        <rect x="244" y="244" width="52" height="52" rx="8"
+              fill="none" stroke="#2563eb" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+        <circle cx="270" cy="270" r="28" fill="#0f172a"/>
+        <text x="270" y="274" text-anchor="middle" fill="white"
+              font-size="10" font-family="JetBrains Mono" letter-spacing="1">CORE</text>
+
+        <!-- outer nodes -->
+        <circle cx="130" cy="170" r="10" fill="#2563eb"/>
+        <circle cx="130" cy="170" r="16" fill="none" stroke="#2563eb" stroke-opacity="0.25"/>
+        <circle cx="410" cy="170" r="10" fill="#2563eb"/>
+        <circle cx="410" cy="170" r="16" fill="none" stroke="#2563eb" stroke-opacity="0.25"/>
+        <circle cx="120" cy="370" r="10" fill="#0f172a"/>
+        <circle cx="120" cy="370" r="16" fill="none" stroke="#0f172a" stroke-opacity="0.25"/>
+        <circle cx="420" cy="370" r="10" fill="#0f172a"/>
+        <circle cx="420" cy="370" r="16" fill="none" stroke="#0f172a" stroke-opacity="0.25"/>
+        <circle cx="270" cy="110" r="8"  fill="#2563eb"/>
+        <circle cx="270" cy="110" r="14" fill="none" stroke="#2563eb" stroke-opacity="0.25"/>
+        <circle cx="270" cy="430" r="8"  fill="#2563eb"/>
+        <circle cx="270" cy="430" r="14" fill="none" stroke="#2563eb" stroke-opacity="0.25"/>
+        <circle cx="80"  cy="270" r="7"  fill="#1e40af"/>
+        <circle cx="80"  cy="270" r="13" fill="none" stroke="#1e40af" stroke-opacity="0.25"/>
+        <circle cx="460" cy="270" r="7"  fill="#1e40af"/>
+        <circle cx="460" cy="270" r="13" fill="none" stroke="#1e40af" stroke-opacity="0.25"/>
+
+        <!-- labels -->
+        <text x="130" y="155" text-anchor="middle" fill="#2563eb" font-size="9" font-family="JetBrains Mono">API_GW</text>
+        <text x="410" y="155" text-anchor="middle" fill="#2563eb" font-size="9" font-family="JetBrains Mono">QUEUE</text>
+        <text x="120" y="392" text-anchor="middle" fill="#0f172a" font-size="9" font-family="JetBrains Mono">DB_01</text>
+        <text x="420" y="392" text-anchor="middle" fill="#0f172a" font-size="9" font-family="JetBrains Mono">DB_02</text>
+        <text x="270" y="95"  text-anchor="middle" fill="#2563eb" font-size="9" font-family="JetBrains Mono">CDN</text>
+        <text x="270" y="452" text-anchor="middle" fill="#2563eb" font-size="9" font-family="JetBrains Mono">CACHE</text>
+      </svg>
+
+      <div class="hero-spec" style="top:28px;left:28px">system.blueprint</div>
+      <div class="hero-spec" style="bottom:28px;right:28px">uptime · 99.98%</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <!-- Portrait placeholder -->
+    <div class="reveal" style="position:relative">
+      <div class="portrait">
+        <svg class="portrait-rings" viewBox="0 0 400 500" preserveAspectRatio="none">
+          <circle cx="200" cy="170" r="60"  fill="none" stroke="white" stroke-opacity="0.10" stroke-width="1"/>
+          <circle cx="200" cy="170" r="120" fill="none" stroke="white" stroke-opacity="0.12" stroke-width="1"/>
+          <circle cx="200" cy="170" r="180" fill="none" stroke="white" stroke-opacity="0.14" stroke-width="1"/>
+          <circle cx="200" cy="170" r="240" fill="none" stroke="white" stroke-opacity="0.16" stroke-width="1"/>
+          <path d="M 0 320 Q 200 280 400 340 L 400 500 L 0 500 Z" fill="rgba(255,255,255,0.04)"/>
+          <path d="M 0 380 Q 200 350 400 400 L 400 500 L 0 500 Z" fill="rgba(255,255,255,0.06)"/>
+        </svg>
+        <svg style="position:absolute;inset:0;width:100%;height:100%"
+             viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="face" cx="50%" cy="40%" r="40%">
+              <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="90" fill="url(#face)"/>
+          <circle cx="200" cy="200" r="68" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+          <path d="M 110 360 Q 200 300 290 360 L 290 420 L 110 420 Z"
+                fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        </svg>
+        <div class="portrait-badge">
+          <div>
+            <div class="sig">Vin T. Aquino</div>
+            <div class="sig-sub">SR. ARCHITECT · CONSULTANT</div>
+          </div>
+          <div class="sig-mark">VA</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy -->
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2 class="section-title">Two decades turning ambiguity into shipped, reliable systems.</h2>
+      <div class="about-body" style="margin-top:28px">
+        <p>I've spent <span class="hl">20 years of engineering excellence</span> at the intersection
+          of strategy and software — building architectures that hold up at scale, lead teams
+          through ambiguity, and translate executive intent into deployable systems.</p>
+        <p>My focus is <span class="hl">bridging technical and business objectives</span>:
+          the right system isn't the one with the most layers, it's the one your org can operate,
+          extend, and trust five years from now. I work with founders, CTOs, and ops leaders
+          who need clear thinking — and code that ships.</p>
+        <p>I keep my hands on the keyboard. That's how you stay credible while
+          <span class="hl">navigating the ever-evolving landscape of software development</span>.</p>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="num">20<span class="unit">y</span></div>
+          <div class="label">Engineering &amp; architecture</div>
+        </div>
+        <div class="about-stat">
+          <div class="num">40<span class="unit">+</span></div>
+          <div class="label">Production systems</div>
+        </div>
+        <div class="about-stat">
+          <div class="num">99.9<span class="unit">%</span></div>
+          <div class="label">Avg. uptime delivered</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="reveal" style="max-width:720px">
+      <div class="eyebrow">Services</div>
+      <h2 class="section-title">The core offering.</h2>
+      <p class="section-lede">Five practices, one operator. Each engagement is led personally — no offshored hand-offs, no junior overload.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 01 Software Architecture -->
+      <article class="service-card reveal" style="transition-delay:0ms">
+        <span class="num">01</span>
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.2"/>
+            <rect x="14" y="3" width="7" height="7" rx="1.2"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.2"/>
+            <rect x="14" y="14" width="7" height="7" rx="1.2"/>
+            <path d="M10 6.5h4M6.5 10v4M17.5 10v4M10 17.5h4"/>
+          </svg>
+        </div>
+        <h3>Software Architecture</h3>
+        <p>Designing resilient, scalable, and secure system blueprints — from event-driven backends to multi-tenant platforms.</p>
+      </article>
+
+      <!-- 02 Custom System Design -->
+      <article class="service-card reveal" style="transition-delay:60ms">
+        <span class="num">02</span>
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>
+            <circle cx="12" cy="12" r="3.5"/>
+          </svg>
+        </div>
+        <h3>Custom System Design</h3>
+        <p>Engineering tailor-made platforms that eliminate bottlenecks, automate workflows, and fit your operating model exactly.</p>
+      </article>
+
+      <!-- 03 Application Development -->
+      <article class="service-card reveal" style="transition-delay:120ms">
+        <span class="num">03</span>
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/>
+          </svg>
+        </div>
+        <h3>Application Development</h3>
+        <p>Building performant, full-stack web and desktop applications across modern JavaScript, Python, and PHP ecosystems.</p>
+      </article>
+
+      <!-- 04 Project Management -->
+      <article class="service-card reveal" style="transition-delay:180ms">
+        <span class="num">04</span>
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 9h18M7 13h6M7 17h4"/>
+            <circle cx="17" cy="15" r="2"/>
+          </svg>
+        </div>
+        <h3>Project Management</h3>
+        <p>Steering software projects from conception to on-time deployment — scope, schedule, risk, and stakeholder alignment.</p>
+      </article>
+
+      <!-- 05 IT Consulting -->
+      <article class="service-card reveal" style="transition-delay:240ms">
+        <span class="num">05</span>
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20c1.5-3 4.5-5 9-5s7.5 2 9 5"/>
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M19 4l1.5 1.5L19 7"/>
+          </svg>
+        </div>
+        <h3>IT Consulting</h3>
+        <p>Providing strategic technical guidance for digital transformation, vendor selection, and engineering due diligence.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     STACK
+════════════════════════════════════════════════════ -->
+<section class="stack" id="stack">
+  <div class="container">
+    <div class="stack-head reveal">
+      <div>
+        <div class="eyebrow">The Engine Room</div>
+        <h2 class="section-title">Technology &amp; expertise.</h2>
+      </div>
+      <p class="section-lede" style="margin-top:0">
+        Battle-tested across financial, healthcare, and enterprise systems. Chosen for fit — not fashion.
+      </p>
+    </div>
+
+    <div class="stack-grid">
+
+      <!-- Frontend -->
+      <div class="stack-col reveal" style="transition-delay:0ms">
+        <div class="stack-col-num mono">// 01</div>
+        <h3>Frontend Engineering</h3>
+        <ul class="stack-list">
+          <li><span class="stack-bullet"><!-- ✓ --><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Vue.js<span class="tag">SPA</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Next.js<span class="tag">SSR/ISR</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>TypeScript<span class="tag">TYPED</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Tailwind CSS<span class="tag">STYLES</span></li>
+        </ul>
+      </div>
+
+      <!-- Backend -->
+      <div class="stack-col reveal" style="transition-delay:80ms">
+        <div class="stack-col-num mono">// 02</div>
+        <h3>Backend &amp; APIs</h3>
+        <ul class="stack-list">
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Python<span class="tag">CORE</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Node.js<span class="tag">RUNTIME</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Laravel (PHP)<span class="tag">MVC</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>PostgreSQL<span class="tag">OLTP</span></li>
+        </ul>
+      </div>
+
+      <!-- Cloud -->
+      <div class="stack-col reveal" style="transition-delay:160ms">
+        <div class="stack-col-num mono">// 03</div>
+        <h3>Cloud Infrastructure</h3>
+        <ul class="stack-list">
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>AWS EC2<span class="tag">COMPUTE</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>AWS S3<span class="tag">STORAGE</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>CloudFront<span class="tag">CDN</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>RDS / Aurora<span class="tag">DB</span></li>
+        </ul>
+      </div>
+
+      <!-- DevOps -->
+      <div class="stack-col reveal" style="transition-delay:240ms">
+        <div class="stack-col-num mono">// 04</div>
+        <h3>DevOps &amp; Automation</h3>
+        <ul class="stack-list">
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>GitHub Actions<span class="tag">CI/CD</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Docker<span class="tag">CONTAINERS</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Terraform<span class="tag">IaC</span></li>
+          <li><span class="stack-bullet"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>Datadog<span class="tag">OBSERVE</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     PORTFOLIO
+════════════════════════════════════════════════════ -->
+<section id="portfolio">
+  <div class="container">
+    <div class="reveal" style="max-width:720px">
+      <div class="eyebrow">Featured Projects</div>
+      <h2 class="section-title">Selected work.</h2>
+      <p class="section-lede">Three production systems where architectural decisions translated directly into operational and financial outcomes.</p>
+    </div>
+
+    <div class="portfolio-list">
+
+      <!-- ── Project 01: Brand Intelligence Monitor ── -->
+      <article class="project reveal">
+        <div class="project-shot-wrap">
+          <div class="project-shot">
+            <div class="project-chrome">
+              <span class="dot" style="background:#fca5a5"></span>
+              <span class="dot" style="background:#fcd34d"></span>
+              <span class="dot" style="background:#86efac"></span>
+              <span class="url">intel.aquino.dev / brand-monitor</span>
+            </div>
+            <div class="dash" style="background:#fbfcfe">
+              <!-- KPIs -->
+              <div class="dash-row" style="margin-bottom:12px">
+                <div class="dash-card">
+                  <div class="lbl">Mentions / 24h</div>
+                  <div class="val">48.2K<small>+12.4%</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">Net Sentiment</div>
+                  <div class="val">+0.62<small>+0.08</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">Ad Spend Share</div>
+                  <div class="val">31.4%<small>+2.1%</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">Top Channels</div>
+                  <div class="val">3<small class="down">−1</small></div>
+                </div>
+              </div>
+              <!-- Chart row -->
+              <div class="dash-row" style="gap:12px">
+                <div class="dash-card" style="flex:1.8">
+                  <div class="lbl" style="margin-bottom:10px">Sentiment by channel · 30d</div>
+                  <svg viewBox="0 0 320 140" width="100%" height="120">
+                    <defs>
+                      <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%"   stop-color="#2563eb" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <line x1="0" x2="320" y1="20"  y2="20"  stroke="#e2e8f0" stroke-dasharray="2 4"/>
+                    <line x1="0" x2="320" y1="50"  y2="50"  stroke="#e2e8f0" stroke-dasharray="2 4"/>
+                    <line x1="0" x2="320" y1="80"  y2="80"  stroke="#e2e8f0" stroke-dasharray="2 4"/>
+                    <line x1="0" x2="320" y1="110" y2="110" stroke="#e2e8f0" stroke-dasharray="2 4"/>
+                    <path d="M0 95 L30 80 L60 88 L90 70 L120 75 L150 55 L180 60 L210 40 L240 48 L270 30 L300 38 L320 22 L320 140 L0 140 Z" fill="url(#g1)"/>
+                    <path d="M0 95 L30 80 L60 88 L90 70 L120 75 L150 55 L180 60 L210 40 L240 48 L270 30 L300 38 L320 22" stroke="#2563eb" stroke-width="2" fill="none"/>
+                    <path d="M0 110 L30 105 L60 100 L90 105 L120 90 L150 95 L180 82 L210 88 L240 75 L270 80 L300 68 L320 62" stroke="#0f172a" stroke-width="1.5" fill="none" opacity="0.5"/>
+                    <path d="M0 120 L30 118 L60 122 L90 115 L120 118 L150 110 L180 112 L210 105 L240 108 L270 100 L300 102 L320 95" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
+                  </svg>
+                </div>
+                <div class="dash-card" style="flex:1">
+                  <div class="lbl">Channel mix</div>
+                  <div style="margin-top:8px">
+                    <div style="display:flex;justify-content:space-between;font-size:11px;color:#475569;margin-bottom:3px"><span>Meta</span><span class="mono">42%</span></div>
+                    <div style="height:5px;background:#eef2f7;border-radius:999px"><div style="width:42%;height:100%;background:#2563eb;border-radius:999px"></div></div>
+                  </div>
+                  <div style="margin-top:8px">
+                    <div style="display:flex;justify-content:space-between;font-size:11px;color:#475569;margin-bottom:3px"><span>YouTube</span><span class="mono">31%</span></div>
+                    <div style="height:5px;background:#eef2f7;border-radius:999px"><div style="width:31%;height:100%;background:#1e40af;border-radius:999px"></div></div>
+                  </div>
+                  <div style="margin-top:8px">
+                    <div style="display:flex;justify-content:space-between;font-size:11px;color:#475569;margin-bottom:3px"><span>TikTok</span><span class="mono">19%</span></div>
+                    <div style="height:5px;background:#eef2f7;border-radius:999px"><div style="width:19%;height:100%;background:#60a5fa;border-radius:999px"></div></div>
+                  </div>
+                  <div style="margin-top:8px">
+                    <div style="display:flex;justify-content:space-between;font-size:11px;color:#475569;margin-bottom:3px"><span>Other</span><span class="mono">8%</span></div>
+                    <div style="height:5px;background:#eef2f7;border-radius:999px"><div style="width:8%;height:100%;background:#cbd5e1;border-radius:999px"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <div class="project-tag"><span class="idx mono">01</span>Analytics · Fintech</div>
+          <h3>Brand Intelligence Monitor</h3>
+          <p class="project-desc">Comprehensive market sentiment and ad-tracking analytics platform aggregating and classifying advertising data across Meta, YouTube, and TikTok for financial institutions.</p>
+          <div class="project-meta">
+            <span class="project-pill">Next.js</span>
+            <span class="project-pill">Python</span>
+            <span class="project-pill">AWS</span>
+            <span class="project-pill">PostgreSQL</span>
+          </div>
+          <a href="#contact" class="project-link">
+            Request a case study
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ── Project 02: Medical Supply ERP ── -->
+      <article class="project reverse reveal">
+        <div class="project-shot-wrap">
+          <div class="project-shot">
+            <div class="project-chrome">
+              <span class="dot" style="background:#fca5a5"></span>
+              <span class="dot" style="background:#fcd34d"></span>
+              <span class="dot" style="background:#86efac"></span>
+              <span class="url">erp.medsupply.io / financial</span>
+            </div>
+            <div class="dash" style="background:#fbfcfe">
+              <!-- KPIs -->
+              <div class="dash-row" style="margin-bottom:12px">
+                <div class="dash-card">
+                  <div class="lbl">Cash Position</div>
+                  <div class="val">₱42.8M<small>+4.2%</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">Open Orders</div>
+                  <div class="val">1,284<small>+86</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">A/R Aging</div>
+                  <div class="val">18d<small class="down">+2d</small></div>
+                </div>
+              </div>
+              <!-- Chart + journal -->
+              <div class="dash-row" style="gap:12px">
+                <div class="dash-card" style="flex:1.4">
+                  <div class="lbl" style="margin-bottom:10px">Order pipeline by region</div>
+                  <svg viewBox="0 0 280 130" width="100%" height="115">
+                    <rect x="14"  y="38" width="22" height="82" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="14"  y="69" width="22" height="51" rx="3" fill="#0f172a"/>
+                    <text x="25"  y="130" font-size="8" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono">NCR</text>
+                    <rect x="56"  y="56" width="22" height="64" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="56"  y="96" width="22" height="24" rx="3" fill="#0f172a"/>
+                    <text x="67"  y="130" font-size="8" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono">Luzon</text>
+                    <rect x="98"  y="24" width="22" height="96" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="98"  y="61" width="22" height="59" rx="3" fill="#0f172a"/>
+                    <text x="109" y="130" font-size="8" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono">Vis.</text>
+                    <rect x="140" y="70" width="22" height="50" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="140" y="101" width="22" height="19" rx="3" fill="#0f172a"/>
+                    <text x="151" y="130" font-size="8" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono">Min.</text>
+                    <rect x="182" y="48" width="22" height="72" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="182" y="93" width="22" height="27" rx="3" fill="#0f172a"/>
+                    <text x="193" y="130" font-size="8" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono">Cebu</text>
+                    <rect x="224" y="62" width="22" height="58" rx="3" fill="#2563eb" opacity="0.85"/>
+                    <rect x="224" y="98" width="22" height="22" rx="3" fill="#0f172a"/>
+                    <text x="235" y="130" font-size="8" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono">Dav.</text>
+                  </svg>
+                </div>
+                <div class="dash-card" style="flex:1">
+                  <div class="lbl" style="margin-bottom:8px">Recent journal entries</div>
+                  <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #e2e8f0;font-size:11px">
+                    <span class="mono" style="color:#64748b">JE-22841</span><span style="color:#475569">Sales — Hosp. A</span><span style="color:#0f172a;font-weight:500">+ ₱182,400</span>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #e2e8f0;font-size:11px">
+                    <span class="mono" style="color:#64748b">JE-22840</span><span style="color:#475569">Sales — Hosp. C</span><span style="color:#0f172a;font-weight:500">+ ₱96,180</span>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #e2e8f0;font-size:11px">
+                    <span class="mono" style="color:#64748b">JE-22839</span><span style="color:#475569">COGS</span><span style="color:#ef4444;font-weight:500">− ₱41,500</span>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;padding:5px 0;font-size:11px">
+                    <span class="mono" style="color:#64748b">JE-22838</span><span style="color:#475569">Sales — Hosp. B</span><span style="color:#0f172a;font-weight:500">+ ₱72,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <div class="project-tag"><span class="idx mono">02</span>ERP · Healthcare</div>
+          <h3>Medical Supply ERP &amp; Financial Dashboard</h3>
+          <p class="project-desc">Specialized ERP tool for medical distributors, tracking live cash positions, order pipelines across regional hospitals, and integrating sales orders with automated journal entries.</p>
+          <div class="project-meta">
+            <span class="project-pill">Laravel</span>
+            <span class="project-pill">Vue.js</span>
+            <span class="project-pill">MySQL</span>
+            <span class="project-pill">Redis</span>
+          </div>
+          <a href="#contact" class="project-link">
+            Request a case study
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ── Project 03: HMO Billing ── -->
+      <article class="project reveal">
+        <div class="project-shot-wrap">
+          <div class="project-shot">
+            <div class="project-chrome">
+              <span class="dot" style="background:#fca5a5"></span>
+              <span class="dot" style="background:#fcd34d"></span>
+              <span class="dot" style="background:#86efac"></span>
+              <span class="url">claims.hmotrack.app / cycle</span>
+            </div>
+            <div class="dash" style="background:#fbfcfe">
+              <!-- KPIs -->
+              <div class="dash-row" style="margin-bottom:12px">
+                <div class="dash-card">
+                  <div class="lbl">Claims in flight</div>
+                  <div class="val">3,412<small>+128</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">Collection rate</div>
+                  <div class="val">94.6%<small>+1.8%</small></div>
+                </div>
+                <div class="dash-card">
+                  <div class="lbl">Days to pay</div>
+                  <div class="val">22.4<small>−3.1d</small></div>
+                </div>
+              </div>
+              <!-- Funnel -->
+              <div class="dash-card" style="margin-bottom:12px">
+                <div class="lbl" style="margin-bottom:12px">Revenue cycle funnel</div>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <div style="flex:1;text-align:center">
+                    <div style="height:56px;background:#0f172a;border-radius:6px;margin-bottom:6px"></div>
+                    <div class="mono" style="font-size:10px;color:#475569">Visit</div>
+                    <div class="mono" style="font-size:9px;color:#0f172a;margin-top:2px">100%</div>
+                  </div>
+                  <span style="color:#cbd5e1;font-size:12px">›</span>
+                  <div style="flex:1;text-align:center">
+                    <div style="height:52px;background:#1e40af;border-radius:6px;margin-bottom:6px"></div>
+                    <div class="mono" style="font-size:10px;color:#475569">Prep</div>
+                    <div class="mono" style="font-size:9px;color:#1e40af;margin-top:2px">92%</div>
+                  </div>
+                  <span style="color:#cbd5e1;font-size:12px">›</span>
+                  <div style="flex:1;text-align:center">
+                    <div style="height:48px;background:#2563eb;border-radius:6px;margin-bottom:6px"></div>
+                    <div class="mono" style="font-size:10px;color:#475569">Submitted</div>
+                    <div class="mono" style="font-size:9px;color:#2563eb;margin-top:2px">84%</div>
+                  </div>
+                  <span style="color:#cbd5e1;font-size:12px">›</span>
+                  <div style="flex:1;text-align:center">
+                    <div style="height:44px;background:#3b82f6;border-radius:6px;margin-bottom:6px"></div>
+                    <div class="mono" style="font-size:10px;color:#475569">Approved</div>
+                    <div class="mono" style="font-size:9px;color:#3b82f6;margin-top:2px">71%</div>
+                  </div>
+                  <span style="color:#cbd5e1;font-size:12px">›</span>
+                  <div style="flex:1;text-align:center">
+                    <div style="height:42px;background:#60a5fa;border-radius:6px;margin-bottom:6px"></div>
+                    <div class="mono" style="font-size:10px;color:#475569">Paid</div>
+                    <div class="mono" style="font-size:9px;color:#60a5fa;margin-top:2px">67%</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Providers table -->
+              <div class="dash-card">
+                <div class="lbl" style="margin-bottom:8px">Top providers · pending claims</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px dashed #e2e8f0;font-size:12px">
+                  <span style="color:#0f172a;font-weight:500">St. Andrea Medical Group</span>
+                  <span class="mono" style="color:#64748b">412 claims</span>
+                  <span style="font-size:10px;padding:2px 8px;border-radius:999px;background:#dcfce7;color:#166534">On track</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px dashed #e2e8f0;font-size:12px">
+                  <span style="color:#0f172a;font-weight:500">Northridge Health Network</span>
+                  <span class="mono" style="color:#64748b">287 claims</span>
+                  <span style="font-size:10px;padding:2px 8px;border-radius:999px;background:#fef3c7;color:#92400e">Review</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;font-size:12px">
+                  <span style="color:#0f172a;font-weight:500">Bayview Care Partners</span>
+                  <span class="mono" style="color:#64748b">196 claims</span>
+                  <span style="font-size:10px;padding:2px 8px;border-radius:999px;background:#dcfce7;color:#166534">On track</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <div class="project-tag"><span class="idx mono">03</span>Revenue Cycle · Healthcare</div>
+          <h3>HMO Billing &amp; Revenue Cycle Tracker</h3>
+          <p class="project-desc">Healthcare administrative portal designed to optimize revenue cycles by managing and streamlining patient visit data and tracking claims from preparation to payment across multiple providers.</p>
+          <div class="project-meta">
+            <span class="project-pill">Next.js</span>
+            <span class="project-pill">Node.js</span>
+            <span class="project-pill">AWS</span>
+            <span class="project-pill">PostgreSQL</span>
+          </div>
+          <a href="#contact" class="project-link">
+            Request a case study
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /portfolio-list -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="reveal">
+      <div class="eyebrow" style="color:#93c5fd;justify-content:center;display:flex">Let's talk</div>
+      <h2 class="section-title">Ready to build something exceptional?</h2>
+      <p class="section-lede">Tell me about your system, your team, and where it's stuck. I'll come back with a clear next step.</p>
+    </div>
+
+    <!-- Form card -->
+    <div class="contact-card reveal">
+
+      <!-- ❶ The contact form
+           ─────────────────────────────────────────────────────────────────
+           To wire up email delivery:
+             1. Sign up free at https://formspree.io
+             2. Create a new form → copy your unique endpoint ID
+             3. Replace YOUR_FORM_ID below with that ID, e.g. xpwzkyab
+           Formspree sends every submission to your inbox — no server needed.
+           ─────────────────────────────────────────────────────────────────  -->
+      <form id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST">
+
+        <!-- Error/status banner (shown by JS) -->
+        <div id="form-status-banner" class="form-status-banner"></div>
+
+        <!-- Row 1: Name + Email -->
+        <div class="form-row">
+          <div class="form-field" id="field-name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Your full name" autocomplete="name" />
+            <span class="err" id="err-name"></span>
+          </div>
+          <div class="form-field" id="field-email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"
+                   placeholder="you@company.com" autocomplete="email" />
+            <span class="err" id="err-email"></span>
+          </div>
+        </div>
+
+        <!-- Row 2: Company + Service -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="company">Company / Organization</label>
+            <input type="text" id="company" name="company"
+                   placeholder="Your company name" />
+          </div>
+          <div class="form-field">
+            <label for="service">Service needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option value="Software Architecture">Software Architecture</option>
+              <option value="Custom System Design">Custom System Design</option>
+              <option value="Application Development">Application Development</option>
+              <option value="Project Management">Project Management</option>
+              <option value="IT Consulting">IT Consulting</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Project details -->
+        <div class="form-field" id="field-details">
+          <label for="details">Project details</label>
+          <textarea id="details" name="details"
+                    placeholder="Briefly describe the system, team, and the problem you'd like solved."></textarea>
+          <span class="err" id="err-details"></span>
+        </div>
+
+        <!-- Row 3: Budget + Timeline -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="budget">Estimated budget</label>
+            <select id="budget" name="budget">
+              <option value="">Select a range…</option>
+              <option value="Under $5K">Under $5K</option>
+              <option value="$5K – $15K">$5K – $15K</option>
+              <option value="$15K – $50K">$15K – $50K</option>
+              <option value="$50K+">$50K+</option>
+              <option value="Let's discuss">Let's discuss</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select timeline…</option>
+              <option value="ASAP">ASAP</option>
+              <option value="1-3 months">1–3 months</option>
+              <option value="3-6 months">3–6 months</option>
+              <option value="6+ months">6+ months</option>
+              <option value="Just exploring">Just exploring</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+          Submit inquiry
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Success state (hidden until form submits OK) -->
+      <div id="form-success" style="display:none" class="form-success">
+        <div class="check">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12l5 5L20 7"/>
+          </svg>
+        </div>
+        <h3>Inquiry received.</h3>
+        <p id="success-msg">Thanks! I'll respond within one business day.</p>
+      </div>
+
+    </div><!-- /contact-card -->
+  </div><!-- /container -->
+
+
+  <!-- FOOTER -->
+  <div class="container footer">
+    <div class="footer-inner">
+      <div>© 2026 Vin T. Aquino · Architecting reliable systems.</div>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="mailto:hello@aquino.dev">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M3 7l9 6 9-6"/>
+          </svg>
+          hello@aquino.dev
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>
