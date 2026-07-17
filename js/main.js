@@ -136,32 +136,40 @@ form.addEventListener('submit', async (e) => {
   statusBanner.className = 'form-status-banner';
   statusBanner.style.display = 'none';
 
+  const ARROW_SVG = '<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
   try {
-    const data = new FormData(form);
-    const res  = await fetch(form.action, {
+    const res = await fetch(form.action, {
       method:  'POST',
-      body:    data,
-      headers: { 'Accept': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:     fields.name.input.value.trim(),
+        email:    fields.email.input.value.trim(),
+        company:  document.getElementById('company').value.trim(),
+        service:  document.getElementById('service').value,
+        details:  fields.details.input.value.trim(),
+        budget:   document.getElementById('budget').value,
+        timeline: document.getElementById('timeline').value,
+      }),
     });
+
+    const json = await res.json().catch(() => ({}));
 
     if (res.ok) {
       const firstName = fields.name.input.value.trim().split(' ')[0];
-      successMsg.textContent = `Thanks, ${firstName}! I'll respond within one business day.`;
+      successMsg.textContent   = `Thanks, ${firstName}! I'll respond within one business day.`;
       form.style.display       = 'none';
       successBox.style.display = 'block';
     } else {
-      const json = await res.json().catch(() => ({}));
-      const msg  = (json.errors || []).map(e => e.message).join(', ')
-                   || 'Something went wrong — please try again or email hello@aquino.dev';
-      statusBanner.textContent = msg;
+      statusBanner.textContent = json.error || 'Something went wrong — please try again or email directly.';
       statusBanner.className   = 'form-status-banner error';
       submitBtn.disabled       = false;
-      submitBtn.innerHTML      = 'Submit inquiry <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      submitBtn.innerHTML      = 'Submit inquiry ' + ARROW_SVG;
     }
   } catch (err) {
     statusBanner.textContent = 'Network error — please check your connection and try again.';
     statusBanner.className   = 'form-status-banner error';
     submitBtn.disabled       = false;
-    submitBtn.innerHTML      = 'Submit inquiry <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    submitBtn.innerHTML      = 'Submit inquiry ' + ARROW_SVG;
   }
 });
