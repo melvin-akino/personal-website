@@ -131,12 +131,22 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!validate()) return;
 
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending…';
-  statusBanner.className = 'form-status-banner';
-  statusBanner.style.display = 'none';
-
   const ARROW_SVG = '<svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+  function resetBtn(label) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = (label || 'Submit inquiry') + ' ' + ARROW_SVG;
+  }
+
+  function showBanner(msg) {
+    statusBanner.removeAttribute('style'); // clear any inline override
+    statusBanner.className   = 'form-status-banner error';
+    statusBanner.textContent = msg;
+  }
+
+  submitBtn.disabled  = true;
+  submitBtn.innerHTML = 'Sending… ' + ARROW_SVG;
+  statusBanner.className = 'form-status-banner'; // hide via CSS class (no inline style)
 
   try {
     const res = await fetch(form.action, {
@@ -161,15 +171,11 @@ form.addEventListener('submit', async (e) => {
       form.style.display       = 'none';
       successBox.style.display = 'block';
     } else {
-      statusBanner.textContent = json.error || 'Something went wrong — please try again or email directly.';
-      statusBanner.className   = 'form-status-banner error';
-      submitBtn.disabled       = false;
-      submitBtn.innerHTML      = 'Submit inquiry ' + ARROW_SVG;
+      showBanner(json.error || 'Something went wrong — please try again or email directly.');
+      resetBtn();
     }
   } catch (err) {
-    statusBanner.textContent = 'Network error — please check your connection and try again.';
-    statusBanner.className   = 'form-status-banner error';
-    submitBtn.disabled       = false;
-    submitBtn.innerHTML      = 'Submit inquiry ' + ARROW_SVG;
+    showBanner('Network error — please check your connection and try again.');
+    resetBtn();
   }
 });
