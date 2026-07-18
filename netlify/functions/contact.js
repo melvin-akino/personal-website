@@ -14,6 +14,12 @@ exports.handler = async (event) => {
   }
 
   try {
+    const apiKey  = process.env.RESEND_API_KEY;
+    const fromAddr = process.env.RESEND_FROM;
+
+    if (!apiKey)   return { statusCode: 500, headers, body: JSON.stringify({ error: 'Server config error: RESEND_API_KEY is not set.' }) };
+    if (!fromAddr) return { statusCode: 500, headers, body: JSON.stringify({ error: 'Server config error: RESEND_FROM is not set.' }) };
+
     const { name, email, company, service, details, budget, timeline } = JSON.parse(event.body || '{}');
 
     if (!name || !email || !details) {
@@ -27,11 +33,11 @@ exports.handler = async (event) => {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: process.env.RESEND_FROM,
+        from: fromAddr,
         to: [process.env.CONTACT_TO || 'akino.melvin@gmail.com'],
         reply_to: email,
         subject: `New inquiry from ${name}`,
