@@ -14,11 +14,15 @@ exports.handler = async (event) => {
   }
 
   try {
-    const apiKey  = process.env.RESEND_API_KEY;
-    const fromAddr = process.env.RESEND_FROM;
+    const apiKey   = (process.env.RESEND_API_KEY || '').trim().replace(/^["']|["']$/g, '');
+    const fromAddr = (process.env.RESEND_FROM    || '').trim().replace(/^["']|["']$/g, '');
 
     if (!apiKey)   return { statusCode: 500, headers, body: JSON.stringify({ error: 'Server config error: RESEND_API_KEY is not set.' }) };
     if (!fromAddr) return { statusCode: 500, headers, body: JSON.stringify({ error: 'Server config error: RESEND_FROM is not set.' }) };
+
+    const validFrom = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fromAddr) ||
+                      /^.+\s<[^\s@]+@[^\s@]+\.[^\s@]+>$/.test(fromAddr);
+    if (!validFrom) return { statusCode: 500, headers, body: JSON.stringify({ error: `Server config error: RESEND_FROM value "${fromAddr}" is not a valid email format.` }) };
 
     const { name, email, company, service, details, budget, timeline } = JSON.parse(event.body || '{}');
 
